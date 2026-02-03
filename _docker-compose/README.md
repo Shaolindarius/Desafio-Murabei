@@ -23,3 +23,22 @@ Para executar a aplicação, você precisará ter o [Docker](https://www.docker.
 1. **Clone o repositório:**
    ```bash
    git clone [https://github.com/Shaolindarius/Desafio-Murabei.git](https://github.com/Shaolindarius/Desafio-Murabei.git)
+
+2. **Build do Backend:**
+   Navegue até a pasta `backend` e execute o script de build:
+   ```bash
+   cd backend
+   ./build.bash
+
+3. **Subir os servicos:**
+   cd ../_docker-compose
+    ./docker-up.bash 
+
+4. **Acesso as Aplicacoes:**
+   - **Frontend**- http://localhost:3000
+   - **Backend** - http://127.0.0.1:5000/books
+
+## Estrutura do Projeto
+- `/frontend`: Aplicação Next.js com os componentes de interface e Shadcn/UI.
+- `/backend`: API Flask em Python que gerencia os dados dos livros.
+- `/_docker-compose`: Scripts de automação e orquestração do ambiente.
