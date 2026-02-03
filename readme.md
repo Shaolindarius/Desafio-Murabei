@@ -1,45 +1,44 @@
-# Murabei test
+# 📚 Gerenciador de Biblioteca - Teste Técnico MuraBei
 
-## Description
+Este projeto é uma aplicação Full Stack para gerenciamento de livros, desenvolvida para o processo seletivo da **MuraBei**. A solução utiliza **Next.js** no frontend, **Flask** no backend e é totalmente containerizada com **Docker**.
 
-Esse e o teste para Desenvolvedor FullStack Jr na Murabei Data Science, usando Docker, Python, Nextjs and sqlite3.
+## Funcionalidades
 
-O objetivo deste teste e avaliar a capcidade do desenvolvedor em criar uma aplicacao Frontend e integra-la em uma API Python. Toda a aplicacao e mantida em containers Docker, e roda usando docker compose. Esta e a mesma arquitetura usada em todos os projetos internos da Murabei.
+- **Listagem Dinâmica:** Visualização de todos os livros cadastrados no backend.
+- **Cadastro de Livros:** Adição de novos títulos com atualização em tempo real
+- **Busca Integrada:** Filtro de livros por título ou autor diretamente na interface.
+- **Remoção de Livros:** Exclusão de registros com atualização de estado no frontend.
+- **Containerização:** Ambiente isolado e pronto para execução via Docker Compose.
 
-## Instrucoes
+## Tecnologias Utilizadas
 
-O repositorio e dividido em 3 pastas:
+- **Frontend:** [Next.js 15](https://nextjs.org/), React, Tailwind CSS, Lucide React e componentes [Shadcn/UI](https://ui.shadcn.com/).
+- **Backend:** [Python 3.12](https://www.python.org/), Flask, Flask-CORS.
+- **Infraestrutura:** Docker e Docker Compose.
 
-- \_docker-compose
-- backend
-- frontend
+## Como Rodar o Projeto
 
-Na pasta **_\_docker-compose_**, estao os arquivos responsaveis por subir todas as imagens Docker. Um **docker-compose.yml**, que possui as informacoes de quais containers e imagens devem subir; um script **docker-up.bash** que sobe os containers baseado no arquivo **docker-compose.yml**; e um arquivo **docker.log**, que armazena todos os logs da aplicacao.
+Para executar a aplicação, você precisará ter o [Docker](https://www.docker.com/) instalado em sua máquina.
 
-Ja na pasta **_backend_** esta a API de livros, em Python Flask. Esta API tem uma gama de operacoes basicas, como listagem de livros, criacao, busca por autor e titulo. Esta API ja esta pre-pronta, mas pode ser alterada de acordo com a sua necessidade, sem problemas.
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/Shaolindarius/Desafio-Murabei.git](https://github.com/Shaolindarius/Desafio-Murabei.git)
 
-Esta pasta possui um script **build.bash** na pasta **_backend_**, que builda a imagem docker a ser utilizada no **docker-compose.yml**.
+2. **Build do Backend:**
+   Navegue até a pasta `backend` e execute o script de build:
+   ```bash
+   cd backend
+   ./build.bash
 
-E, a pasta **_frontend_**, onde devem ser colocados codigos do FE. Aqui na Murabei, utilizamos o NextJS como framework de React, logo, seu FE deve ser desenolvido em NextJS, pelo menos, na versao 14.2.25;
+3. **Subir os servicos:**
+   cd ../_docker-compose
+    ./docker-up.bash 
 
-## Inicializacao
+4. **Acesso as Aplicacoes:**
+   - **Frontend**- http://localhost:3000
+   - **Backend** - http://127.0.0.1:5000/books
 
-Clone o repositorio do Github, e va na pasta **_backend_**, e rode o script **_build.bash_**. Esse script ira buildar uma imagem docker local para o seu backend. Depois, va na pasta **_\_docker-compose_** e rode o script **_docker-up.bash_**, que ira subir o **docker-compose.yml**, subindo todos os servicos.
-
-## Objetivos do Teste
-
-O objetivo deste teste e criar uma aplicacao FE em NextJS que faz as operacoes basicas de CRUD, como listar, criar e deletar livros, alem de permitir buscar esses livros pelo titulo ou pelo autor.
-
-O FE podera rodar em modo de desenolvimento, mas se comunicando com a API rodando no docker-compose.
-
-## Avaliacao
-
-Aqui vao os pontos que sera avaliados no teste:
-
-**_Obrigatorios_**
-
-- O FE deve possuir uma tela de listagem dos livros 
-- O FE deve possuir uma tela de busca de livros por titulo
-- O FE deve possuir uma tela de busca de livros por autor 
-- O FE deve possuir uma tela de criacao de livros 
-- As telas devem ser feitas usando componentes da biblioteca [shadcn/ui](https://ui.shadcn.com/) 
+## Estrutura do Projeto
+- `/frontend`: Aplicação Next.js com os componentes de interface e Shadcn/UI.
+- `/backend`: API Flask em Python que gerencia os dados dos livros.
+- `/_docker-compose`: Scripts de automação e orquestração do ambiente.
