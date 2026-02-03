@@ -5,7 +5,7 @@ Este projeto é uma aplicação Full Stack para gerenciamento de livros, desenvo
 ## Funcionalidades
 
 - **Listagem Dinâmica:** Visualização de todos os livros cadastrados no backend.
-- **Cadastro de Livros:** Adição de novos títulos com atualização em tempo real (sem necessidade de F5).
+- **Cadastro de Livros:** Adição de novos títulos com atualização em tempo real
 - **Busca Integrada:** Filtro de livros por título ou autor diretamente na interface.
 - **Remoção de Livros:** Exclusão de registros com atualização de estado no frontend.
 - **Containerização:** Ambiente isolado e pronto para execução via Docker Compose.
@@ -22,5 +22,4 @@ Para executar a aplicação, você precisará ter o [Docker](https://www.docker.
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/SEU_USUARIO/teste-tecnico-murabei.git](https://github.com/SEU_USUARIO/teste-tecnico-murabei.git)
-   cd teste-tecnico-murabei
+   git clone [https://github.com/Shaolindarius/Desafio-Murabei.git](https://github.com/Shaolindarius/Desafio-Murabei.git)
